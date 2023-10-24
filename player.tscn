@@ -1,14 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://baeyvmigdyspm"]
+[gd_scene load_steps=3 format=3 uid="uid://baeyvmigdyspm"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gded"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gpih5"]
+height = 46.0
 
-[node name="RigidBody2D" type="RigidBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3x1b"]
+height = 46.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_0gded")
+[node name="Player" type="Node2D"]
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
+[node name="LArm" type="RigidBody2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(20, 0)
-shape = SubResource("CapsuleShape2D_0gded")
+[node name="LArmCol" type="CollisionShape2D" parent="LArm"]
+position = Vector2(-19, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_gpih5")
+
+[node name="RArm" type="RigidBody2D" parent="."]
+
+[node name="RArmCol" type="CollisionShape2D" parent="RArm"]
+position = Vector2(21, 0)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_q3x1b")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+node_a = NodePath("../LArm")
+node_b = NodePath("../RArm")
