@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://baeyvmigdyspm"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0gded"]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_0gded")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(20, 0)
+shape = SubResource("CapsuleShape2D_0gded")
