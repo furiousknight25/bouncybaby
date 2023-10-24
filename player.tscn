@@ -1,26 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://baeyvmigdyspm"]
+[gd_scene load_steps=2 format=3 uid="uid://baeyvmigdyspm"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gpih5"]
-height = 46.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q3x1b"]
-height = 46.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tmn8s"]
+size = Vector2(5.5, 31.5)
 
 [node name="Player" type="Node2D"]
 
 [node name="LArm" type="RigidBody2D" parent="."]
 
-[node name="LArmCol" type="CollisionShape2D" parent="LArm"]
+[node name="LArmCol" type="CollisionPolygon2D" parent="LArm"]
 position = Vector2(-19, 0)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_gpih5")
+polygon = PackedVector2Array(-9, 16, -9, -17, -8.30516e-07, -19, 8, -17, 8, 16, 7.86805e-07, 18)
+
+[node name="LHandCol" type="CollisionShape2D" parent="LArm"]
+position = Vector2(-39, 0)
+shape = SubResource("RectangleShape2D_tmn8s")
 
 [node name="RArm" type="RigidBody2D" parent="."]
 
-[node name="RArmCol" type="CollisionShape2D" parent="RArm"]
-position = Vector2(21, 0)
+[node name="RArmCol" type="CollisionPolygon2D" parent="RArm"]
+position = Vector2(18, 1.61732e-06)
 rotation = 1.5708
-shape = SubResource("CapsuleShape2D_q3x1b")
+polygon = PackedVector2Array(-9, 16, -9, -17, -8.30516e-07, -19, 8, -17, 8, 16, -8.30516e-07, 18)
+
+[node name="RHandCol" type="CollisionShape2D" parent="RArm"]
+position = Vector2(39, 0)
+shape = SubResource("RectangleShape2D_tmn8s")
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 node_a = NodePath("../LArm")
