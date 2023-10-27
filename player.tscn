@@ -27,6 +27,9 @@ rotation = 1.5708
 scale = Vector2(1, 1.623)
 polygon = PackedVector2Array(-9, 16, -9, -17, 0, -18.563, 8, -17, 8, 16, 0, 18.563)
 
+[node name="LArmMarker" type="Marker2D" parent="LArm/LArmCol"]
+position = Vector2(0.000108719, 18.5238)
+
 [node name="LHandCol" type="CollisionShape2D" parent="LArm"]
 position = Vector2(-57.125, 0)
 shape = SubResource("RectangleShape2D_tmn8s")
@@ -38,6 +41,11 @@ position = Vector2(30, 7.27596e-12)
 rotation = 1.5708
 scale = Vector2(1, 1.62289)
 polygon = PackedVector2Array(-9, 16, -9, -17, 0, -18.563, 8, -17, 8, 16, 3.99152e-05, 18.5632)
+
+[node name="RArmMarker" type="Marker2D" parent="RArm/RArmCol"]
+position = Vector2(-0.000108571, -18.4807)
+rotation = -1.5708
+scale = Vector2(0.616185, 1)
 
 [node name="RHandCol" type="CollisionShape2D" parent="RArm"]
 position = Vector2(57.0625, 0)
