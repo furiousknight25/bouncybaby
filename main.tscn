@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://bfyf0sy38doj"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_fqulh"]
-[ext_resource type="PackedScene" uid="uid://droht0knojrvc" path="res://player.tscn" id="2_qxfrr"]
+[ext_resource type="PackedScene" uid="uid://baeyvmigdyspm" path="res://player.tscn" id="2_qxfrr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4ywun"]
 size = Vector2(1153, 36)
@@ -18,6 +18,7 @@ size = Vector2(46, 47.25)
 script = ExtResource("1_fqulh")
 
 [node name="RigidBody2D" parent="." instance=ExtResource("2_qxfrr")]
+position = Vector2(367, 111)
 rotation = 0.47822
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
