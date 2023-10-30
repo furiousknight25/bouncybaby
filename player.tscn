@@ -9,6 +9,7 @@ size = Vector2(5.875, 31.5)
 radius = 14.0
 
 [node name="Player" type="RigidBody2D"]
+mass = 0.1
 script = ExtResource("1_kjpb5")
 
 [node name="PinJoint2D2" type="PinJoint2D" parent="."]
@@ -21,6 +22,7 @@ node_b = NodePath("../RArm")
 
 [node name="LArm" type="RigidBody2D" parent="."]
 position = Vector2(-7, 0)
+mass = 2.0
 
 [node name="LArmCol" type="CollisionPolygon2D" parent="LArm"]
 position = Vector2(-30, 0)
